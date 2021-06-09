@@ -1,0 +1,43 @@
+<template>
+  <div class="row">
+    <div class="col-md-8">
+      <edit-profile-form :model="model">
+      </edit-profile-form>
+    </div>
+    <div class="col-md-4">
+      <user-card :user="user"></user-card>
+    </div>
+  </div>
+</template>
+<script>
+  import EditProfileForm from './Profile/EditProfileForm';
+  import UserCard from './Profile/UserCard'
+  export default {
+    components: {
+      EditProfileForm,
+      UserCard
+    },
+    data() {
+      return {
+        model: {
+          company: 'Affine Group Limited',
+          email: 'affine@gmail.com',
+          username: 'Peter',
+          firstName: 'Peter',
+          lastName: 'Clarke',
+          address: 'London',
+          city: 'London',
+          country: 'United Kindom',
+          about: 'He is a great leader'
+        },
+        user: {
+          fullName: 'Peter Clarke',
+          title: 'Ceo/Co-Founder',
+          description: `Do not be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...`,
+        }
+      }
+    }
+  }
+</script>
+<style>
+</style>
